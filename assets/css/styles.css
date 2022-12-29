@@ -303,6 +303,7 @@ nav ul li {
   position: fixed;
   right: 1%;
   bottom: 50%;
+  background-color: white;
 }
 
 .socicon {
