@@ -1,4 +1,22 @@
+/* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+@font-face {
+  font-family: 'Headliner No. 45';
+  src: url(/assets/css/fonts/HeadlinerNo45/HeadlinerNo45.ttf) format('ttf');
+  font-style: normal;
+  font-weight: normal;
+}
+
+.headliner {
+  font-family: 'Headliner No. 45', 'Ubuntu';
+}
+
+.seccion-titulo {
+  font-size: 2rem;
+  padding: 15px 0;
+  font-family: 'Rubik Dirt', cursive;
+}
 
 /* Variables */
 :root {
@@ -51,7 +69,6 @@ body {
 /*Nav bar*/
 
 nav {
-  position: sticky;
   top: 0;
   left: 0;
   z-index: 1;
@@ -59,13 +76,13 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem 3.5rem;
-  background: rgb(159,52,71);
-  background: linear-gradient(90deg, rgba(159,52,71,0.9416141456582633) 0%, rgba(161,11,102,0.9108018207282913) 36%, rgba(18,76,88,1) 100%);
+  background: rgb(52, 77, 159);
+  background: linear-gradient(90deg, rgba(52, 68, 159, 0.942) 0%, rgba(87, 98, 117, 0.911) 36%, rgba(18,76,88,1) 100%);
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 .logo-icon {
-  height: 2em;
+  height: 1.5em;
   margin: none;
   vertical-align: middle;
 }
@@ -74,6 +91,7 @@ nav h1 {
   color: var(--primary-color);
   display: inline-block;
   color: aliceblue;
+  font-size: 3em;
 }
 
 nav a {
@@ -103,6 +121,10 @@ nav ul li {
   display: none;
 }
 
+.navbar-collapse {
+  align-items: center;
+  justify-content: space-between;
+}
 /*Hero section*/
 .hero {
   display: flex;
@@ -114,8 +136,7 @@ nav ul li {
 }
 
 .hero img {
-  height: 37.5rem;
-  width: 37.5rem;
+  width: 45rem;
 }
 
 .bio {
@@ -170,8 +191,8 @@ nav ul li {
 }
 
 .icon {
-  width: 11.875rem;
-  height: 11.25rem;
+  width: 7.875rem;
+  height: 7.25rem;
 }
 
 .icon-card {
@@ -301,8 +322,8 @@ nav ul li {
   display: flex;
   flex-direction: column;
   position: fixed;
-  right: 1%;
-  bottom: 50%;
+  left: 1%;
+  bottom: 1%;
   background-color: white;
 }
 
@@ -336,98 +357,14 @@ footer {
 
 /*Responsive*/
 
-@media screen and (max-width: 720px) {
-  /*changes reflects on screen with a width of 720px and below*/
-  nav {
-    padding: 1.5rem 1rem;
-  }
-
-  nav ul {
-    position: fixed;
-    background-color: var(--bg-color);
-    flex-direction: column;
-    top: 86px;
-    left: 10%;
-    width: 80%;
-    text-align: center;
-    transform: translateX(120%);
-    transition: transform 0.5s ease-in;
-  }
-
-  nav ul li {
-    margin: 8px;
-  }
-
-  .burger-menu {
-    display: block;
-  }
-
-  nav ul.show {
-    transform: translateX(0);
-  }
-
-  .hero {
-    margin-top: -4rem;
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .hero img {
-        height: 37.5rem;
-        width: 30rem;
-    }
-
-  .bio {
-    margin-top: -7rem;
-    width: 20.5rem;
-  }
-
-  .more-about {
-    margin-top: 2rem;
-    padding: 1rem 3.5rem;
-  }
-
-  .more-about h2 {
-    text-align: center;
-  }
-
-  .more-about p {
-    text-align: justify;
-  }
-
-  .icon {
-    width: 5.875rem;
-    height: 5.25rem;
-  }
-
-  .projects-container {
-    flex-direction: column;
-  }
-
-  .project-container {
-    width: 20.875rem;
-  }
-
-  .contact-form-container {
-    max-width: 23.75rem;
+@media screen and (max-width: 760px) {
+  .navbar-brand{
+      display: none;
   }
 }
 
-@media screen and (max-width: 420px) {
-  .hero img {
-    height: 37.5rem;
-    width: 23rem;
+@media screen and (min-width: 700px) {
+  .hero-inferior-image{
+      max-width: 650px;
   }
-
-  .bio {
-    width: 18.3rem;
-  }
-
-  .project-container {
-    width: 17.875rem;
-  }
-
-  .contact-form-container {
-    max-width: 17.75rem;
-  }
-} 
+}
